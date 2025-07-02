@@ -35,3 +35,8 @@ const container = document.querySelector('.profile-pic-container');
     staticImg.style.display = 'block';
     staticImg.style.transform = 'scale(1)';
   });
+
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('hidden');
+  }

@@ -9,7 +9,21 @@
   <script src="script.js"></script>
 </head>
 <body>
-  <div class="container">
+  <!-- SideBar -->
+<div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+
+<div id="sidebar" class="sidebar-nav hidden">
+  <div class="logo"></div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#video-editing">Video Editing</a></li>
+      <li><a href="#graphic-design">Graphic Design</a></li>
+      <li><a href="#cameras">Cameras</a></li>
+    </ul>
+  </div>
+
+<!-- Home -->
+  <div id= "home" class="container">
     <div class="profile-section">
       <div class="profile-pic-container">
   <img src="Bardach Digital Picture.jpg" alt="Profile" class="profile-pic static-img" />
@@ -27,22 +41,27 @@
 
         <div class="contact-skill-row">
           <div class="contact half">
-            <h2>Contact</h2>
+            <h2>Contacts</h2>
             <div class="contact-icon"><img src="Contact/Account.png"/><span>Abderrahmane Bardach</span></div>
             <div class="contact-icon"><img src="Contact/Birth.png"/><span>15/02/2002</span></div>
-            <div class="contact-icon"><img src="Contact/Location.png"/><span>Morocco</span></div>
-            <div class="contact-icon"><img src="Contact/Phone.png"/><span>+212 707686993</span></div>
-            <div class="contact-icon"><img src="Contact/Email.png"/><span>bardachkenitra@gmail.com</span></div>
+            <div class="contact-icon"><img src="Contact/Location.png"/><span>Singapore</span></div>
+            <div class="contact-icon"><img src="Contact/Phone.png"/><span>+65 93768062</span></div>
+            <div class="contact-icon"><img src="Contact/Email.png"/><span>businessbardachyt@gmail.com</span></div>
+            <a href="https://www.instagram.com/bardachedits01/" target="_blank" rel="noopener noreferrer">
             <div class="contact-icon"><img src="Contact/Instagram.png"/><span>instagram.com/bardachedits01</span></div>
+            </a>
+            <a href="https://www.linkedin.com/in/bardachedits/" target="_blank">
+            <div class="contact-icon"><img src="Contact/Linkedin.png"/><span>linkedin.com/in/bardachedits</span></div>
+            </a>
           </div>
 
           <div class="skills half">
-            <h2>Skill</h2>
-            <p>The entire <span class="highlight">Adobe software</span> applies to <span class="highlight">video</span>, <span class="highlight">image</span>, and <span class="highlight">audio editing</span><br>
-              Have a visual <span class="highlight">storytelling</span> mindset<br>
-              <span class="highlight">Sound design</span> thinking (Music & SFX)<br>
-              Experience in <span class="highlight">building channels</span><br>
-              Know <span class="highlight">basic VFX</span>
+            <h2>Skills</h2>
+            <p>The entire <span >Adobe software</span> applies to <span >video</span>, <span >image</span>, and <span >audio editing</span><br>
+              Have a visual <span >storytelling</span> mindset<br>
+              <span >Sound design</span> thinking (Music & SFX)<br>
+              Experience in <span >building channels</span><br>
+              Know <span >medium VFX</span>
             </p>
           </div>
         </div>
@@ -50,7 +69,7 @@
     </div>
 <!-- Software -->
     <div class="software">
-      <h2>Software</h2>
+      <h2>Softwares</h2>
       <div class="flex-center">
         <img src="Programs/premiere-pro.png" class="icon" alt="Pr">
         <img src="Programs/after-effects.png" class="icon" alt="Ae">
@@ -74,43 +93,45 @@
   </div>
 
   <!-- Portfolio Sections -->
-<div class="portfolio-section">
-  <h2>My Work</h2>
+<div id="video-editing" class="portfolio-section">
+  <h2>Video Editing</h2>
 
   <!-- Section 1: Advertising Videos -->
   <div class="portfolio-block">
     <div class="video-wrapper">
-      <img src="1.JPG"></img>
+      <img src="VE-Thumbnails/Advertising Videos.png"></img>
     </div>
     <div class="portfolio-text">
       <h3>Advertising Videos</h3>
-      <p>Dynamic and scroll-stopping edits crafted for YouTube, Reels, and more. High pacing, storytelling, and clean transitions.</p>
+      <p>Promotional content created for brands, products, or services. 
+        These edits focus on impact, storytelling, and clear messaging to 
+        engage and convert audiences.</p>
     </div>
   </div>
 
   <!-- Section 2: Green Screen Videos -->
   <div class="portfolio-block reverse">
     <div class="video-wrapper">
-      <img src="1.JPG"></img>
+      <img src="VE-Thumbnails/Green Screen Video.jpg"></img>
     </div>
     <div class="portfolio-text">
       <h3>Green Screen Videos</h3>
-      <p>Engaging and versatile visuals created using green 
-        screen technology to seamlessly blend backgrounds 
-        and effects. Perfect for dynamic storytelling, brand 
-        promotion, and immersive content that captures 
-        attention.</p>
+      <p>Advanced chroma key editing to replace backgrounds and create 
+        seamless visuals—perfect for presenters, explainer videos, or 
+        creative effects.</p>
     </div>
   </div>
 
   <!-- Section 3: 3D Videos -->
   <div class="portfolio-block">
     <div class="video-wrapper">
-      <img src="1.JPG"></img>
+      <img src="VE-Thumbnails/3D Video.jpg"></img>
     </div>
     <div class="portfolio-text">
       <h3>3D Videos</h3>
-      <p>2D/3D animated elements to give your content life, enhance storytelling, and retain attention longer.</p>
+      <p>Edits enhanced with 3D animation or motion graphics, adding 
+        depth and realism for product showcases, intros, or visual 
+        storytelling.</p>
     </div>
   </div>
 </div>
@@ -118,11 +139,12 @@
 <!-- Section 4: Institutionnel Video -->
   <div class="portfolio-block reverse">
     <div class="video-wrapper">
-      <img src="1.JPG"></img>
+      <img src="VE-Thumbnails/Institutionnel Videos.png"></img>
     </div>
     <div class="portfolio-text">
       <h3>Institutionnel Videos</h3>
-      <p>2D/3D animated elements to give your content life, enhance storytelling, and retain attention longer.</p>
+      <p>Corporate or institutional videos designed to present a company’s values, 
+        services, culture, or internal communications in a clear and polished way.</p>
     </div>
   </div>
 </div>
@@ -130,14 +152,131 @@
 <!-- Section 5: Commercial Video -->
   <div class="portfolio-block">
     <div class="video-wrapper">
-      <img src="1.JPG"></img>
+      <img src="VE-Thumbnails/Commercial Videos.png"></img>
     </div>
     <div class="portfolio-text">
       <h3>Commercial Videos</h3>
-      <p>2D/3D animated elements to give your content life, enhance storytelling, and retain attention longer.</p>
+      <p>Creative and impactful edits made for product or service 
+        promotion—designed to attract customers and enhance brand 
+        visibility across platforms.</p>
     </div>
   </div>
 </div>
+
+<!-- Section 6: Funny Videos -->
+  <div class="portfolio-block reverse">
+    <div class="video-wrapper">
+      <img src="VE-Thumbnails/Funny Videos.png"></img>
+    </div>
+    <div class="portfolio-text">
+      <h3>Funny Videos</h3>
+      <p>Entertaining and humorous edits aimed at engaging viewers through 
+        comedy, memes, clever timing, and creative effects.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Section 7: Stream Pack -->
+  <div class="portfolio-block">
+    <div class="video-wrapper">
+      <img src="VE-Thumbnails/Stream Pack.jpg"></img>
+    </div>
+    <div class="portfolio-text">
+      <h3>Stream Pack</h3>
+      <p>Custom-designed overlays, transitions, alerts, and intros tailored 
+        for streamers—enhancing live broadcasts with a professional and 
+        consistent look.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Graphic Design Section -->
+<div id="graphic-design" class="portfolio-section">
+  <h2>Graphic Design</h2>
+
+  <!-- Design Block 1: Branding Design -->
+  <div class="portfolio-block">
+    <div class="video-wrapper">
+      <img src="VE-Thumbnails/Thumbnail.jpg" alt="Youtube Thumbnails">
+    </div>
+    <div class="portfolio-text">
+      <h3>Youtube Thumbnails</h3>
+      <p>Eye-catching and high-converting thumbnails designed to 
+        boost click-through rates by capturing attention and clearly 
+        representing the video’s content.</p>
+    </div>
+  </div>
+
+  <!-- Design Block 2: Social Media Design -->
+  <div class="portfolio-block reverse">
+    <div class="video-wrapper">
+      <img src="VE-Thumbnails/GD3.png" alt="Instagram Cover">
+    </div>
+    <div class="portfolio-text">
+      <h3>Instagram Cover</h3>
+      <p>Creative and visually engaging 3-slide designs optimized 
+        for Instagram carousels—perfect for storytelling, promotions, 
+        or showcasing visuals in a swipeable format.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Cameras Section -->
+<div id="cameras" class="portfolio-section">
+  <h2>Cameras</h2>
+
+  <!-- Block 1: Sony FX30 -->
+  <div class="portfolio-block">
+    <div class="video-wrapper">
+      <img src="VE-Thumbnails/Sony FX30.jpg" alt="Sony FX30">
+    </div>
+    <div class="portfolio-text">
+      <h3>Sony FX30</h3>
+      <p>Filmed using the Sony FX30, a powerful cinema camera that 
+        delivers cinematic image quality, rich color depth, and exceptional 
+        low-light performance—perfect for professional video production.</p>
+    </div>
+  </div>
+
+  <!-- Block 2: Sony a7R -->
+  <div class="portfolio-block reverse">
+    <div class="video-wrapper">
+      <img src="VE-Thumbnails/Sony a7R.jpg" alt="Sony a7R">
+    </div>
+    <div class="portfolio-text">
+      <h3>Sony A7R</h3>
+      <p>Captured with the Sony A7R, a high-resolution mirrorless 
+        camera known for its stunning detail, dynamic range, and sharp 
+        imagery—ideal for both video and photography projects.</p>
+    </div>
+  </div>
+
+  <!-- Block 3: SONY FE 50 mm f1,8 OSS -->
+  <div class="portfolio-block">
+    <div class="video-wrapper">
+      <img src="VE-Thumbnails/SONY FE 50 mm f1,8 OSS.jpg" alt="SONY FE 50 mm f1,8 OSS">
+    </div>
+    <div class="portfolio-text">
+      <h3>SONY FE 50 mm f1.8 OSS</h3>
+      <p>Used the Sony FE 50mm f/1.8 OSS lens to achieve sharp, 
+        natural-looking shots with beautiful background blur 
+        and built-in image stabilization—perfect for portraits, interviews, 
+        and cinematic visuals.</p>
+    </div>
+  </div>
+</div>
+
+<footer style="
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: #ff6b00;
+  background-color: #000;
+  font-family: 'Poppins', sans-serif;
+  animation: glow 2.5s ease-in-out infinite alternate;
+">
+  “Bringing your stories to life, one frame at a time. Let’s create something unforgettable.”
+</footer>
 
 </body>
 </html>

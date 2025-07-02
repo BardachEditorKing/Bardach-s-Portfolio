@@ -8,6 +8,7 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 40px 20px;
+      margin-left: 200px; /* Offset for sidebar */
     }
     .flex {
       display: flex;
@@ -320,5 +321,121 @@
 
   .portfolio-section {
     padding: 20px 10px;
+  }
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #aaa;
+  margin: 60px 0 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.breadcrumb span {
+  color: #ff6b00;
+}
+
+/* slide bar */
+/* Toggle Button */
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  z-index: 2000;
+  background: #111;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  background-color: #ff6b00;
+  color: #000;
+}
+
+/* Sidebar */
+.sidebar-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100vh;
+  background-color: #111;
+  padding-top: 60px;
+  z-index: 1500;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-nav.hidden {
+  transform: translateX(-100%);
+}
+
+.sidebar-nav .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav ul li a {
+  display: block;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li a.active {
+  background-color: #222;
+  color: #ff6b00;
+}
+
+/* Push main content when sidebar is visible */
+.container {
+  margin-left: 200px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-nav.hidden + .container {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 20px;
+  }
+}
+
+
+.contact-skill-row a {
+  color: inherit; /* makes the link take the surrounding text color */
+  text-decoration: none; /* removes underline */
+}
+.contact-skill-row a:hover {
+  transition: color 0.5s ease;
+  color: #ff6b00;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff6b00;
+  }
+  to {
+    text-shadow: 0 0 20px #ff6b00, 0 0 30px #ff6b00;
   }
 }
