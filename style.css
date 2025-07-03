@@ -22,75 +22,43 @@
       flex-wrap: wrap;
       gap: 20px;
     }
-    .profile-pic {
-      width: 250px;
-      border-radius: 10px;
-      flex-shrink: 0;
-    }
     .profile-section {
       display: flex;
       gap: 40px;
       align-items: flex-start;
       flex-wrap: wrap;
     }
-    .profile-pic {
-      width: 250px;
-      border-radius: 10px;
-      flex-shrink: 0;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
 
-    .profile-pic:hover {
-      transform: scale(1.05);
-    }
+.profile-pic-container {
+  position: relative;
+  width: 250px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-    .profile-pic-container {
-      position: relative;
-      width: 250px;
-      flex-shrink: 0;
-      cursor: pointer;
-      border-radius: 10px;
-      overflow: hidden;
-    }
+.profile-pic {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: block;
+  position: relative;
+  object-fit: cover;
+}
 
-    .profile-pic {
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-    }
+.profile-pic:hover {
+  transform: scale(1.05);
+}
 
-/* Static image visible by default */
-    .static-img {
-      position: relative;
-      z-index: 2;
-      display: block;
-      transition: transform 0.3s ease;
-    }
+.profile-section {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
 
-/* GIF hidden by default */
-    .gif-img {
-      z-index: 1;
-      display: none;
-    }
 
-/* On hover - zoom and switch images */
-    .profile-pic-container:hover .static-img {
-      transform: scale(1.1);
-      display: none;
-    }
-
-    .profile-pic-container:hover .gif-img {
-      display: block;
-      transform: scale(1.1);
-      position: relative;
-      z-index: 3;
-    }
 
 
 
