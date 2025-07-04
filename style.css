@@ -1,33 +1,36 @@
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: white;
-    }
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      margin-left: 200px; /* Offset for sidebar */
-    }
-    .flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .flex-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .profile-section {
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: white;
+}
+.container {
+  max-width: 1100px;
+  padding: 40px 20px;
+  transition: margin-left 0.3s ease;
+  /* Default to auto for both left/right for general centering */
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.profile-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .profile-pic-container {
   position: relative;
@@ -51,133 +54,123 @@
   transform: scale(1.05);
 }
 
-.profile-section {
+.text-columns {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+.contact-skill-row {
+  display: flex;
+  flex-direction: row;
   gap: 40px;
-  align-items: flex-start;
   flex-wrap: wrap;
 }
+.half {
+  flex: 1;
+  min-width: 250px;
+}
+h2 {
+  color: #ff6b00;
+  margin: 0 0 10px;
+}
+.icon {
+  height: 40px;
+  margin: 0 10px;
+}
+.highlight {
+  color: orange;
+}
+.timeline {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+  overflow-x: auto;
+  gap: 20px;
+  justify-content: center;
+}
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #fff, red);
+  z-index: 0;
+}
+.milestone {
+  position: relative;
+  background: #000;
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 1;
+  min-width: 100px;
+  text-align: center;
+}
+.milestone span {
+  display: block;
+  font-weight: bold;
+}
+.software {
+  text-align: center;
+  margin-top: 40px;
+}
+.software .flex-center {
+  margin-top: 10px;
+}
+.experience {
+  text-align: center;
+  margin-top: 40px;
+}
+.contact-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.contact-icon img {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+.icon {
+  height: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
 
+.icon:hover {
+  transform: scale(1.2);
+}
 
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-pic {
+    width: 100%;
+    max-width: 250px;
+  }
+  .text-columns {
+    width: 100%;
+  }
+  .contact-skill-row {
+    flex-direction: column;
+  }
+  .flex,
+  .flex-center {
+    justify-content: center;
+  }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-
-
-    .text-columns {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      flex: 1;
-    }
-    .contact-skill-row {
-      display: flex;
-      flex-direction: row;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .half {
-      flex: 1;
-      min-width: 250px;
-    }
-    h2 {
-      color: #ff6b00;
-      margin: 0 0 10px;
-    }
-    .icon {
-      height: 40px;
-      margin: 0 10px;
-    }
-    .highlight {
-      color: orange;
-    }
-    .timeline {
-      display: flex;
-      align-items: center;
-      position: relative;
-      margin-top: 20px;
-      overflow-x: auto;
-      gap: 20px;
-      justify-content: center;
-    }
-    .timeline:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(to right, #fff, red);
-      z-index: 0;
-    }
-    .milestone {
-      position: relative;
-      background: #000;
-      padding: 10px;
-      border-radius: 6px;
-      z-index: 1;
-      min-width: 100px;
-      text-align: center;
-    }
-    .milestone span {
-      display: block;
-      font-weight: bold;
-    }
-    .software {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .software .flex-center {
-      margin-top: 10px;
-    }
-    .experience {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .contact-icon {
-      display: flex;
-      align-items: center;
-      margin-bottom: 5px;
-    }
-    .contact-icon img {
-      width: 16px;
-      height: 16px;
-      margin-right: 10px;
-    }
-    .icon {
-      height: 40px;
-      margin: 0 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .icon:hover {
-      transform: scale(1.2);
-    }
-
-    @media (max-width: 768px) {
-      .profile-section {
-        flex-direction: column;
-        align-items: center;
-      }
-      .profile-pic {
-        width: 100%;
-        max-width: 250px;
-      }
-      .text-columns {
-        width: 100%;
-      }
-      .contact-skill-row {
-        flex-direction: column;
-      }
-      .flex,
-      .flex-center {
-        justify-content: center;
-      }
-    }
-
-
-
-
- .portfolio-section {
+.portfolio-section {
   margin-top: 10px;
   padding: 10px 10px;
   text-align: center;
@@ -237,10 +230,10 @@
 @media (max-width: 768px) {
   .portfolio-block,
   .portfolio-block.reverse {
-    flex-direction: column !important;  
-    align-items: center;                 
+    flex-direction: column !important;
+    align-items: center;
     justify-content: center;
-    gap: 15px;                          
+    gap: 15px;
     margin-bottom: 30px;
     padding: 0 10px;
   }
@@ -252,7 +245,7 @@
     margin: 0 auto;
     padding: 0;
     display: flex;
-    justify-content: center;            
+    justify-content: center;
     flex-shrink: 0;          /* Prevent shrinking */
   }
 
@@ -267,10 +260,10 @@
   .portfolio-text {
     width: 100%;
     max-width: 600px;
-    text-align: center;                  
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;                 
+    align-items: center;
     margin: 0 auto;
     padding: 0 10px;
   }
@@ -373,22 +366,31 @@
   color: #ff6b00;
 }
 
-/* Push main content when sidebar is visible */
-.container {
-  margin-left: 200px;
-  transition: margin-left 0.3s ease;
+/* Push main content past sidebar and then center it in remaining space */
+.sidebar-nav:not(.hidden) + .container {
+  /* Calculate margin-left to position content right of sidebar and center it */
+  margin-left: calc(180px + (100vw - 180px - 1100px) / 2);
+  margin-right: auto; /* Ensure auto margin on right */
 }
 
+/* Allow auto margin to truly center when sidebar is hidden */
 .sidebar-nav.hidden + .container {
-  margin-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
   .container {
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* For small screens, if sidebar is not hidden (e.g., overlay),
+     ensure content centers normally. */
+  .sidebar-nav:not(.hidden) + .container {
+      margin-left: auto;
+      margin-right: auto;
   }
 }
-
 
 .contact-skill-row a {
   color: inherit; /* makes the link take the surrounding text color */
